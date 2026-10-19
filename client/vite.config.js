@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    dedupe: ['react', 'react-dom'] // 👈 Core fix: force only one React instance
+    dedupe: ['react', 'react-dom']
+  },
+  build: {
+    rolldownOptions: {} 
   }
 })
